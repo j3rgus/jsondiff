@@ -1,0 +1,21 @@
+[project]
+name = "jsondiff"
+version = "1.0.0"
+authors = [{ name = "Jergus Lysy", email = "jergus.misc@gmail.com" }]
+description = "A tool for watching JSON files and diffing them"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/jerguslysy/jsondiff"
+Issues = "https://github.com/jerguslysy/jsondiff/issues"
+
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
