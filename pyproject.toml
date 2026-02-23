@@ -21,16 +21,6 @@ requires = ["setuptools >= 77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [tool.flake8]
-# For now exclude legacy code and scanners lib
-exclude = [
-    "bbdj",                                          # not maintained
-    "accessory",                                     # not maintained
-    "openair",                                       # not maintained
-    "tests/config/hw_profile.py",                    # test config, not relevant for linting
-    "tests/config/local_settings.py",                # test config, not relevant for linting
-    "tests/config/settings.py",                      # test config, not relevant for linting
-    "equipment/octasic/stackapi/base/structures.py", # generated code, skip linting
-]
 max-line-length = 88
 docstring-convention = "google"
 extend-ignore = [
