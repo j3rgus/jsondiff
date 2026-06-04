@@ -1,5 +1,5 @@
 [project]
-name = "jsondiff"
+name = "jsonwatch"
 version = "1.0.0"
 authors = [{ name = "Jergus Lysy", email = "jergus.misc@gmail.com" }]
 description = "A tool for watching JSON files and diffing them"
@@ -13,8 +13,11 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]
 
 [project.urls]
-Homepage = "https://github.com/jerguslysy/jsondiff"
-Issues = "https://github.com/jerguslysy/jsondiff/issues"
+Homepage = "https://github.com/jerguslysy/jsonwatch"
+Issues = "https://github.com/jerguslysy/jsonwatch/issues"
+
+[project.scripts]
+jsonwatch = "jsonwatch.__main__:main"
 
 [build-system]
 requires = ["setuptools >= 77.0.3"]

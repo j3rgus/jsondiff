@@ -1,4 +1,4 @@
-# jsondiff
+# jsonwatch
 
 An interactive JSON diff tool that periodically fetches JSON from URLs and displays differences between consecutive fetches with beautiful, colorized output.
 
@@ -31,7 +31,7 @@ pip install .
 Watch a JSON endpoint and display changes:
 
 ```bash
-jsondiff https://api.example.com/data
+jsonwatch https://api.example.com/data
 ```
 
 ### Filter by JSONPath-like Path
@@ -39,11 +39,11 @@ jsondiff https://api.example.com/data
 Filter to specific parts of the JSON structure:
 
 ```bash
-jsondiff https://api.example.com/data --filter-path "items[*]"
+jsonwatch https://api.example.com/data --filter-path "items[*]"
 ```
 
 ```bash
-jsondiff https://api.example.com/data --filter-path "data.items[0]"
+jsonwatch https://api.example.com/data --filter-path "data.items[0]"
 ```
 
 ### Filter by Key-Value
@@ -51,13 +51,13 @@ jsondiff https://api.example.com/data --filter-path "data.items[0]"
 Filter objects that match a specific key-value pair:
 
 ```bash
-jsondiff https://api.example.com/data --filter-key "status" --filter-value "active"
+jsonwatch https://api.example.com/data --filter-key "status" --filter-value "active"
 ```
 
 Filter by key only (shows all items with that key):
 
 ```bash
-jsondiff https://api.example.com/data --filter-key "id"
+jsonwatch https://api.example.com/data --filter-key "id"
 ```
 
 ### Show Only Differences
@@ -65,7 +65,7 @@ jsondiff https://api.example.com/data --filter-key "id"
 Display only the changes, not the full comparison:
 
 ```bash
-jsondiff https://api.example.com/data --show-only-diffs
+jsonwatch https://api.example.com/data --show-only-diffs
 ```
 
 ### Custom Interval
@@ -73,7 +73,7 @@ jsondiff https://api.example.com/data --show-only-diffs
 Change the polling interval (default is 2 seconds):
 
 ```bash
-jsondiff https://api.example.com/data -i 5
+jsonwatch https://api.example.com/data -i 5
 ```
 
 ### With Authentication
@@ -81,13 +81,13 @@ jsondiff https://api.example.com/data -i 5
 Add custom HTTP headers for authentication:
 
 ```bash
-jsondiff https://api.example.com/data --header "Authorization: Bearer your-token-here"
+jsonwatch https://api.example.com/data --header "Authorization: Bearer your-token-here"
 ```
 
 Multiple headers:
 
 ```bash
-jsondiff https://api.example.com/data \
+jsonwatch https://api.example.com/data \
   --header "Authorization: Bearer token" \
   --header "X-Custom-Header: value"
 ```
@@ -97,7 +97,7 @@ jsondiff https://api.example.com/data \
 Monitor an API endpoint, filter for active items, show only diffs, and poll every 3 seconds:
 
 ```bash
-jsondiff https://api.example.com/data \
+jsonwatch https://api.example.com/data \
   --filter-key "status" \
   --filter-value "active" \
   --show-only-diffs \
@@ -124,7 +124,7 @@ jsondiff https://api.example.com/data \
    - 🟢 Green for added items
    - 🔴 Red for removed items
    - 🟡 Yellow for changed values
-5. Saves the current state to `~/.jsondiff_cache/` for persistence across restarts
+5. Saves the current state to `~/.jsonwatch_cache/` for persistence across restarts
 
 ## Output Format
 
